@@ -7,7 +7,7 @@ import BottomCta from "../layout/BottomCta";
 import style from "../styles/css/footer.module.css";
 import { Button, Typography } from "@material-ui/core";
 
-import indexData from "./indexData";
+import indexData from "../components/indexData";
 import Footer from "../layout/Footer";
 
 export default function Home() {

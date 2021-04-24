@@ -1,6 +1,6 @@
 import React from "react";
 
-import indexData from "../pages/indexData";
+import indexData from "../components/indexData";
 
 import style from "../styles/css/desc.module.css";
 import { Typography } from "@material-ui/core";

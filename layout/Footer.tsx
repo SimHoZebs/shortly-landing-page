@@ -3,7 +3,7 @@ import React from "react";
 import style from "../styles/css/footer.module.css";
 import { Typography } from "@material-ui/core";
 
-import indexData from "../pages/indexData";
+import indexData from "../components/indexData";
 
 const Footer = () => {
   return (

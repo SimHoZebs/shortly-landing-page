@@ -1,6 +1,6 @@
 import React from "react";
 
-import indexData from "../pages/indexData";
+import indexData from "../components/indexData";
 
 import style from "../styles/css/navbar.module.css";
 import { Typography, Button } from "@material-ui/core";
