@@ -1,0 +1,64 @@
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: hsl(230, 25%, 95%);
+  padding-top: 13.375rem;
+  padding-bottom: 7.5rem;
+
+  &__line {
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    background: hsl(178, 64%, 50%);
+    top: 50%;
+  }
+  &__desc {
+    margin-top: 1.75rem;
+    width: 30rem;
+  }
+
+  &__blockContainer {
+    position: relative;
+    margin-top: 6.625rem;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    width: fit-content;
+  }
+}
+
+.block {
+  position: relative;
+  background: white;
+  width: 21.875rem;
+  height: 16.75rem;
+  padding: 2rem;
+  padding-top: 0rem;
+  border-radius: 1rem;
+
+  &:not(:last-child) {
+    margin-right: 1.875rem;
+  }
+
+  &:nth-child(3) {
+    margin-top: 2.875rem;
+  }
+
+  &:last-child {
+    margin-top: calc(2.875 * 2rem);
+  }
+
+  &__img {
+    position: relative;
+    transform: translateY(-50%);
+    background: hsl(257, 27%, 26%);
+    padding: 1rem;
+    border-radius: 100%;
+  }
+
+  &__title {
+    margin-bottom: 1.375rem;
+  }
+}

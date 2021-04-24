@@ -1,0 +1,30 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 4.875rem;
+
+  &__text {
+    padding-left: 10.625rem;
+    width: 50vw;
+  }
+
+  &__desc {
+    padding-right: 5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  &__imgContainer {
+    width: 50vw;
+    overflow: hidden;
+  }
+  &__img {
+    position: relative;
+    transform: translateX(6.5rem);
+  }
+}
+
+#btn {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}

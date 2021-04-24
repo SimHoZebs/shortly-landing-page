@@ -1,0 +1,29 @@
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-top: 4.875rem;
+}
+.hero__text {
+  padding-left: 10.625rem;
+  width: 50vw;
+}
+.hero__desc {
+  padding-right: 5rem;
+  margin-bottom: 2.25rem;
+}
+.hero__imgContainer {
+  width: 50vw;
+  overflow: hidden;
+}
+.hero__img {
+  position: relative;
+  transform: translateX(6.5rem);
+}
+
+#btn {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/*# sourceMappingURL=hero.module.css.map */

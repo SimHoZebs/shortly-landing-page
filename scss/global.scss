@@ -1,0 +1,12 @@
+@use "variables" as var;
+
+a {
+  display: block;
+  color: var.$secondaryText;
+  text-decoration: none;
+  transition: color 300ms;
+
+  &:hover {
+    color: black;
+  }
+}

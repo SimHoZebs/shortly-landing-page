@@ -1,0 +1,11 @@
+a {
+  display: block;
+  color: #b8b7bd;
+  text-decoration: none;
+  transition: color 300ms;
+}
+a:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=global.css.map */

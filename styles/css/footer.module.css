@@ -1,0 +1,30 @@
+.footer {
+  color: white;
+  background: #232027;
+  height: fit-content;
+}
+.footer__logo {
+  margin-right: 15.625rem;
+}
+.footer__container {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.footer .block {
+  margin-right: 6.125rem;
+}
+.footer .block__title {
+  margin-bottom: 2rem;
+}
+.footer .block__link:hover {
+  color: #2acfcf;
+}
+.footer .block__link:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.footer__socials :not(:last-child) {
+  margin-right: 1rem;
+}
+
+/*# sourceMappingURL=footer.module.css.map */

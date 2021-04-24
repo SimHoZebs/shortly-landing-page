@@ -2,27 +2,60 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 // Create a theme instance.
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: "'Poppins', sans-serif",
+    h2: {
+      fontSize: "4rem",
+      fontWeight: 700,
+    },
+
+    h4: {
+      letterSpacing: "-0.1rem",
+      fontWeight: 700,
+    },
+
+    body1: {
+      color: "hsl(240,4%,63%)",
+      fontWeight: 500,
+    },
+  },
+
   overrides: {
     MuiCssBaseline: {
       "@global": {
-        html: {
-          fontSize: "1px",
-        },
         body: {
-          color: "hsl(255,11%,22%)",
+          color: "hsl(260,20%,9%)",
           fontSize: "18px",
-          fontFamily: "'Poppins', sans-serif",
           fontWeight: 500,
         },
       },
     },
+
+    MuiButton: {
+      root: {
+        fontSize: "1rem",
+        fontWeight: 700,
+        textTransform: "capitalize",
+        borderRadius: "2rem",
+        padding: "0.75rem 1.375rem",
+      },
+
+      containedPrimary: {
+        color: "white",
+
+        "&:hover": {
+          backgroundColor: "hsl(179, 56%, 75%)",
+        },
+      },
+    },
   },
+
   palette: {
     primary: {
       main: "hsl(180, 66%, 49%)",
     },
     secondary: {
-      main: "hsl(257, 27%, 26%)",
+      main: "hsl(0, 0%, 75%)",
     },
     error: {
       main: "hsl(0, 87%, 67%)",

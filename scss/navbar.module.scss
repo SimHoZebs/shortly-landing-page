@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 11.4%;
+  margin-top: 3rem;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    :not(:last-child) {
+      margin-right: 1.875rem;
+    }
+  }
+}
+
+#btn {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}

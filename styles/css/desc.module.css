@@ -1,0 +1,59 @@
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #eff0f5;
+  padding-top: 13.375rem;
+  padding-bottom: 7.5rem;
+}
+.desc__line {
+  position: absolute;
+  height: 0.5rem;
+  width: 100%;
+  background: #2ed1cc;
+  top: 50%;
+}
+.desc__desc {
+  margin-top: 1.75rem;
+  width: 30rem;
+}
+.desc__blockContainer {
+  position: relative;
+  margin-top: 6.625rem;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  width: fit-content;
+}
+
+.block {
+  position: relative;
+  background: white;
+  width: 21.875rem;
+  height: 16.75rem;
+  padding: 2rem;
+  padding-top: 0rem;
+  border-radius: 1rem;
+}
+.block:not(:last-child) {
+  margin-right: 1.875rem;
+}
+.block:nth-child(3) {
+  margin-top: 2.875rem;
+}
+.block:last-child {
+  margin-top: calc(2.875 * 2rem);
+}
+.block__img {
+  position: relative;
+  transform: translateY(-50%);
+  background: #3b3054;
+  padding: 1rem;
+  border-radius: 100%;
+}
+.block__title {
+  margin-bottom: 1.375rem;
+}
+
+/*# sourceMappingURL=desc.module.css.map */
