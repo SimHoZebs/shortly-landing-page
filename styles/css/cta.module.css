@@ -21,16 +21,19 @@
   border: none;
   padding-left: 2rem;
   width: 48rem;
-  border: 0.15rem white solid;
+  border: 0.2rem white solid;
   border-radius: 1rem;
   height: 4rem;
   background: white;
 }
 .cta__input:focus {
-  border: 0.15rem #2acfcf solid;
+  border: 0.2rem #2acfcf solid;
 }
-.cta__input_input {
-  border: 0.15rem #f46262 solid;
+.cta__input_error {
+  border: 0.2rem #f46262 solid;
+}
+.cta__input_error:focus {
+  border: 0.2rem #f46262 solid;
 }
 
 #cta__btn {
