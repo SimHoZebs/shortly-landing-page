@@ -5,6 +5,7 @@ a {
   transition: color 300ms;
 }
 a:hover {
+  cursor: pointer;
   color: black;
 }
 
