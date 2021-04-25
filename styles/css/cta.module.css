@@ -22,7 +22,7 @@
   padding-left: 2rem;
   width: 48rem;
   border: 0.2rem white solid;
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   height: 4rem;
   background: white;
 }
@@ -34,6 +34,10 @@
 }
 .cta__input_error:focus {
   border: 0.2rem #f46262 solid;
+}
+.cta__errorText {
+  color: #f46262;
+  position: absolute;
 }
 
 #cta__btn {

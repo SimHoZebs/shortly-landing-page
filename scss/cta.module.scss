@@ -25,7 +25,7 @@ $inputBorder: 0.2rem;
     padding-left: 2rem;
     width: 48rem;
     border: $inputBorder white solid;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     height: 4rem;
     background: white;
 
@@ -39,6 +39,11 @@ $inputBorder: 0.2rem;
         border: $inputBorder var.$error solid;
       }
     }
+  }
+
+  &__errorText {
+    color: var.$error;
+    position: absolute;
   }
 }
 
