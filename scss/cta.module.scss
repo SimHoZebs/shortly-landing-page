@@ -1,9 +1,13 @@
 @use "variables" as var;
 $inputBorder: 0.2rem;
 
+.ctaContainer {
+  background: var.$descBg;
+}
+
 .cta {
   position: relative;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;

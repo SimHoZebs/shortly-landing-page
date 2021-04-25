@@ -1,6 +1,10 @@
+.ctaContainer {
+  background: #eff0f5;
+}
+
 .cta {
   position: relative;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;

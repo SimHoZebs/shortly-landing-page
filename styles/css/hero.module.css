@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: row-reverse;
   margin-top: 4.875rem;
+  margin-bottom: 9.375rem;
 }
 .hero__text {
   padding-left: 10.625rem;
