@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import style from "../styles/css/cta.module.css";
 import { Button } from "@material-ui/core";
 
+import axios from "axios";
+
+const apiLink = "https://api.shrtco.de/v2/shorten";
+
 const Cta: React.FC = () => {
   const [link, setLink] = useState("");
   const [isError, setIsError] = useState(false);
+  const [shortenedLink, setShortenedLink] = useState([""]);
 
-  function shorten(
+  async function shorten(
     e:
       | React.FormEvent<HTMLFormElement>
       | React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -17,6 +22,15 @@ const Cta: React.FC = () => {
     if (link === "") {
       setIsError(true);
     } else {
+      try {
+        console.log("Submitting");
+
+        const res = await axios.get(apiLink, { params: { url: link } });
+        console.log("created!");
+        console.log(res.data);
+      } catch (error) {
+        console.log(error);
+      }
       //use API
     }
   }
@@ -30,7 +44,7 @@ const Cta: React.FC = () => {
             className={`${style.cta__input} ${
               isError && style.cta__input_error
             }`}
-            type="text"
+            type="link"
             placeholder="Shorten a link here..."
           />
 
