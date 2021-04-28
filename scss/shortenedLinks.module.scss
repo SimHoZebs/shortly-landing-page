@@ -1,0 +1,34 @@
+@use "variables" as var;
+
+.container {
+  margin-top: -4.95rem;
+  padding-bottom: 8.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 0;
+
+  .block {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 69.25rem;
+
+    margin-top: 1.5rem;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+
+    &__right {
+      color: var.$primaryText;
+      display: flex;
+    }
+  }
+}
+
+#btn {
+  margin-left: 1rem;
+}

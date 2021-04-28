@@ -1,0 +1,30 @@
+.container {
+  margin-top: -4.95rem;
+  padding-bottom: 8.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 0;
+}
+.container .block {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 69.25rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+.container .block__right {
+  color: #2acfcf;
+  display: flex;
+}
+
+#btn {
+  margin-left: 1rem;
+}
+
+/*# sourceMappingURL=shortenedLinks.module.css.map */
