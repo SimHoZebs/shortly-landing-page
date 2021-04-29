@@ -19,22 +19,26 @@ function Cta() {
   ]);
   const [linkLoading, setLinkLoading] = useState<boolean>(false);
 
-  async function shorten(
+  async function handleSubmit(
     e:
       | React.FormEvent<HTMLFormElement>
       | React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
     e.preventDefault();
+    console.log("hello");
+
+    setLink((prev) => "");
 
     try {
-      setRequestedLinks((prev) => [link, ...prev]);
       setLinkLoading(true);
 
+      setIsError(false);
       const res = await axios.get(apiLink, { params: { url: link } });
 
-      setLinkLoading(false);
+      setRequestedLinks((prev) => [link, ...prev]);
       setShortendLinks((prev) => [res.data.result.full_short_link2, ...prev]);
-      setIsError(false);
+
+      setLinkLoading(false);
     } catch (error) {
       setLinkLoading(false);
       setIsError(true);
@@ -44,9 +48,10 @@ function Cta() {
   return (
     <div className={style.ctaContainer}>
       <div className={style.ctaElements}>
-        <form className={style.cta} onSubmit={(e) => shorten(e)}>
+        <form className={style.cta} onSubmit={(e) => handleSubmit(e)}>
           <div className={style.cta__inputContainer}>
             <input
+              value={link}
               onChange={(e) => setLink(e.target.value)}
               className={`${style.cta__input} ${
                 isError && style.cta__input_error
@@ -64,7 +69,7 @@ function Cta() {
 
           <Button
             id={style.cta__btn}
-            onClick={(e) => shorten(e)}
+            onClick={(e) => handleSubmit(e)}
             variant="contained"
             color="primary"
           >
