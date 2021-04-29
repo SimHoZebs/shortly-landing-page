@@ -9,18 +9,22 @@
   position: relative;
   top: 0;
 
+  .loadingImg {
+    height: 5rem;
+    margin-top: 1.5rem;
+  }
+
   .block {
     p {
       margin: auto 0rem;
     }
 
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
     background-color: white;
     width: 69.25rem;
     border-radius: 0.8rem;
-
-    margin-top: 1.5rem;
 
     padding-top: 1rem;
     padding-bottom: 1rem;

@@ -3,11 +3,19 @@ import style from "../styles/css/shortenedLinks.module.css";
 interface props {
   requestedLinks: string[];
   shortenedLinks: string[];
+  linkLoading: boolean;
 }
 
-function ShortenedLinks({ requestedLinks, shortenedLinks }: props) {
+function ShortenedLinks({
+  requestedLinks,
+  shortenedLinks,
+  linkLoading,
+}: props) {
   return (
     <div className={style.container}>
+      {linkLoading && (
+        <img className={style.loadingImg} src="/images/loading.svg" alt="" />
+      )}
       {shortenedLinks.map((shortenedLink, index) => (
         <div className={style.block}>
           <p>{requestedLinks[index]}</p>

@@ -7,13 +7,17 @@
   position: relative;
   top: 0;
 }
+.container .loadingImg {
+  height: 5rem;
+  margin-top: 1.5rem;
+}
 .container .block {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   background-color: white;
   width: 69.25rem;
   border-radius: 0.8rem;
-  margin-top: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.875rem;

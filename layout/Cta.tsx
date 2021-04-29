@@ -17,6 +17,7 @@ function Cta() {
   const [shortenedLinks, setShortendLinks] = useState<string[]>([
     "test shortened link",
   ]);
+  const [linkLoading, setLinkLoading] = useState<boolean>(false);
 
   async function shorten(
     e:
@@ -26,12 +27,16 @@ function Cta() {
     e.preventDefault();
 
     try {
-      setRequestedLinks((prev) => [...prev, link]);
+      setRequestedLinks((prev) => [link, ...prev]);
+      setLinkLoading(true);
+
       const res = await axios.get(apiLink, { params: { url: link } });
 
-      setShortendLinks((prev) => [...prev, res.data.result.full_short_link2]);
+      setLinkLoading(false);
+      setShortendLinks((prev) => [res.data.result.full_short_link2, ...prev]);
       setIsError(false);
     } catch (error) {
+      setLinkLoading(false);
       setIsError(true);
     }
   }
@@ -70,6 +75,7 @@ function Cta() {
         <ShortenedLinks
           requestedLinks={requestedLinks}
           shortenedLinks={shortenedLinks}
+          linkLoading={linkLoading}
         />
       </div>
     </div>
