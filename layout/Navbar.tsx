@@ -10,8 +10,10 @@ const Navbar = () => {
     <nav className={style.navbar}>
       <div className={style.navbar__nav}>
         <Typography variant="h4">Shortly</Typography>
-        {indexData.menus.map((menu) => (
-          <a href="/">{menu}</a>
+        {indexData.menus.map((menu, index) => (
+          <a key={index} href="/">
+            {menu}
+          </a>
         ))}
       </div>
 

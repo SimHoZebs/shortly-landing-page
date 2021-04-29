@@ -17,7 +17,7 @@ function ShortenedLinks({
         <img className={style.loadingImg} src="/images/loading.svg" alt="" />
       )}
       {shortenedLinks.map((shortenedLink, index) => (
-        <div className={style.block}>
+        <div key={index} className={style.block}>
           <p>{requestedLinks[index]}</p>
 
           <div className={style.block__right}>

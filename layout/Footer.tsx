@@ -13,14 +13,16 @@ const Footer = () => {
           <Typography variant="h4">Shortly</Typography>
         </div>
 
-        {indexData.footers.map((footer) => (
-          <div className={style.block}>
+        {indexData.footers.map((footer, index) => (
+          <div key={index} className={style.block}>
             <div className={style.block__title}>
               <b>{footer.title}</b>
             </div>
 
-            {footer.links.map((link) => (
-              <a className={style.block__link}>{link}</a>
+            {footer.links.map((link, index) => (
+              <a key={index} className={style.block__link}>
+                {link}
+              </a>
             ))}
           </div>
         ))}

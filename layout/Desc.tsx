@@ -18,14 +18,15 @@ const Desc = () => {
           statistics dashboard.
         </Typography>
       </div>
+
       <div className={style.desc__blockContainer}>
         <div className={style.desc__line}></div>
-        {indexData.desc.map((blok) => (
-          //46 px lower than the previous
-          <div className={style.block}>
+        {indexData.desc.map((blok, index) => (
+          <div key={index} className={style.block}>
             <div className={style.block__imgContainer}>
               <img className={style.block__img} src={blok.image} alt="" />
             </div>
+
             <div className={style.block__title}>
               <Typography variant="h6">
                 <b>{blok.title}</b>
