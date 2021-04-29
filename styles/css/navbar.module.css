@@ -11,10 +11,21 @@
 .navbar__nav :not(:last-child) {
   margin-right: 1.875rem;
 }
+.navbar .credsContainer {
+  display: flex;
+  justify-content: flex-end;
+}
 
-#btn {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+#login {
+  border: 1px solid white;
+  color: #bfbfbf;
+  height: 2.5rem;
+  width: 6.625rem;
+}
+
+#signUp {
+  height: 2.5rem;
+  width: 6.625rem;
 }
 
 /*# sourceMappingURL=navbar.module.css.map */

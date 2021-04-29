@@ -15,10 +15,12 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div>
-        <Button>Login</Button>
+      <div className={style.credsContainer}>
+        <Button variant="outlined" id={style.login}>
+          Login
+        </Button>
 
-        <Button id={style.btn} variant="contained" color="primary">
+        <Button id={style.signUp} variant="contained" color="primary">
           Sign Up
         </Button>
       </div>

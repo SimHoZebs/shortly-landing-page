@@ -33,9 +33,9 @@
   background: white;
   width: 21.875rem;
   height: 16.75rem;
-  padding: 2rem;
+  padding: 1.8rem;
   padding-top: 0rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 
   &:not(:last-child) {
     margin-right: 1.875rem;
@@ -49,12 +49,21 @@
     margin-top: calc(2.875 * 2rem);
   }
 
-  &__img {
+  &__imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     transform: translateY(-50%);
     background: hsl(257, 27%, 26%);
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  &__img {
+    overflow: visible;
     padding: 1rem;
-    border-radius: 100%;
   }
 
   &__title {

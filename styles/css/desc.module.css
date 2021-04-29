@@ -31,9 +31,9 @@
   background: white;
   width: 21.875rem;
   height: 16.75rem;
-  padding: 2rem;
+  padding: 1.8rem;
   padding-top: 0rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 .block:not(:last-child) {
   margin-right: 1.875rem;
@@ -44,12 +44,20 @@
 .block:last-child {
   margin-top: calc(2.875 * 2rem);
 }
-.block__img {
+.block__imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   transform: translateY(-50%);
   background: #3b3054;
+  border-radius: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.block__img {
+  overflow: visible;
   padding: 1rem;
-  border-radius: 100%;
 }
 .block__title {
   margin-bottom: 1.375rem;

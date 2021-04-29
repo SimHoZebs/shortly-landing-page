@@ -26,5 +26,8 @@
 .footer__socials :not(:last-child) {
   margin-right: 1rem;
 }
+.footer__socials :hover {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=footer.module.css.map */

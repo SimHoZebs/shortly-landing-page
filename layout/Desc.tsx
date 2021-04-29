@@ -23,7 +23,9 @@ const Desc = () => {
         {indexData.desc.map((blok) => (
           //46 px lower than the previous
           <div className={style.block}>
-            <img className={style.block__img} src={blok.image} alt="" />
+            <div className={style.block__imgContainer}>
+              <img className={style.block__img} src={blok.image} alt="" />
+            </div>
             <div className={style.block__title}>
               <Typography variant="h6">
                 <b>{blok.title}</b>
