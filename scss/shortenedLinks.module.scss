@@ -10,10 +10,15 @@
   top: 0;
 
   .block {
+    p {
+      margin: auto 0rem;
+    }
+
     display: flex;
     justify-content: space-between;
     background-color: white;
     width: 69.25rem;
+    border-radius: 0.8rem;
 
     margin-top: 1.5rem;
 
@@ -31,4 +36,8 @@
 
 #btn {
   margin-left: 1rem;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 6.375rem;
 }

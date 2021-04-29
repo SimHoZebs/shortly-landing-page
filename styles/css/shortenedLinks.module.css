@@ -12,11 +12,15 @@
   justify-content: space-between;
   background-color: white;
   width: 69.25rem;
+  border-radius: 0.8rem;
   margin-top: 1.5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1.875rem;
   padding-right: 1.875rem;
+}
+.container .block p {
+  margin: auto 0rem;
 }
 .container .block__right {
   color: #2acfcf;
@@ -25,6 +29,10 @@
 
 #btn {
   margin-left: 1rem;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 6.375rem;
 }
 
 /*# sourceMappingURL=shortenedLinks.module.css.map */
