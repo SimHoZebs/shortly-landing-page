@@ -25,19 +25,14 @@ function Cta() {
   ) {
     e.preventDefault();
 
-    if (link === "") {
-      setIsError(true);
-    } else {
-      try {
-        setRequestedLinks((prev) => [...prev, link]);
-        console.log("Submitting");
+    try {
+      setRequestedLinks((prev) => [...prev, link]);
+      const res = await axios.get(apiLink, { params: { url: link } });
 
-        const res = await axios.get(apiLink, { params: { url: link } });
-        console.log(res.data.result.full_short_link2);
-        setShortendLinks((prev) => [...prev, res.data.result.full_short_link2]);
-      } catch (error) {
-        console.log(error);
-      }
+      setShortendLinks((prev) => [...prev, res.data.result.full_short_link2]);
+      setIsError(false);
+    } catch (error) {
+      setIsError(true);
     }
   }
 
@@ -57,10 +52,11 @@ function Cta() {
 
             {isError && (
               <div className={style.cta__errorText}>
-                <i>Please add a link</i>
+                <i>Please type a valid link</i>
               </div>
             )}
           </div>
+
           <Button
             id={style.cta__btn}
             onClick={(e) => shorten(e)}
