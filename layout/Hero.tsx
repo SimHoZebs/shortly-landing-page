@@ -1,8 +1,12 @@
 import style from "../styles/css/hero.module.css";
 import React from "react";
-import { Typography, Button } from "@material-ui/core";
 
-const Hero = () => {
+import { Typography, Button } from "@material-ui/core";
+import useStyles from "../styles/hero";
+
+function Hero() {
+  const classes = useStyles();
+
   return (
     <div className={style.hero}>
       <div className={style.hero__imgContainer}>
@@ -13,7 +17,9 @@ const Hero = () => {
         />
       </div>
       <div className={style.hero__text}>
-        <Typography variant="h2">More than just shorter links</Typography>
+        <Typography classes={{ h2: classes.h2 }} variant="h2">
+          More than just shorter links
+        </Typography>
 
         <div className={style.hero__desc}>
           <Typography>
@@ -28,6 +34,6 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Hero;
