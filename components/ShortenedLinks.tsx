@@ -1,34 +1,37 @@
 import { Button } from "@material-ui/core";
 import style from "../styles/css/shortenedLinks.module.css";
+import CopyButton from "./CopyButton";
 interface props {
-  requestedLinks: string[];
-  shortenedLinks: string[];
+  inputLinks: string[];
+  shortLinks: string[];
   linkLoading: boolean;
 }
 
-function ShortenedLinks({
-  requestedLinks,
-  shortenedLinks,
-  linkLoading,
-}: props) {
+function ShortenedLinks({ inputLinks, shortLinks, linkLoading }: props) {
+  const shortLinksLastIndex = shortLinks.length - 1;
+
   return (
     <div className={style.container}>
       {linkLoading && (
         <img className={style.loadingImg} src="/images/loading.svg" alt="" />
       )}
-      {shortenedLinks.map((shortenedLink, index) => (
-        <div key={index} className={style.block}>
-          <p>{requestedLinks[index]}</p>
+      {}
 
-          <div className={style.block__right}>
-            <p>{shortenedLink}</p>
+      {shortLinks.map((_, index) => {
+        const reverseIndex = shortLinksLastIndex - index;
+        const shortLink = shortLinks[reverseIndex];
 
-            <Button id={style.btn} color="primary" variant="contained">
-              Copy
-            </Button>
+        return (
+          <div key={reverseIndex} className={style.block}>
+            <p>{inputLinks[reverseIndex]}</p>
+
+            <div className={style.block__right}>
+              <p>{shortLink}</p>
+              <CopyButton shortLink={shortLink} />
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

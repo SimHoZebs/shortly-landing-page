@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import style from "../styles/css/cta.module.css";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 
 import axios from "axios";
 import ShortenedLinks from "../components/ShortenedLinks";
@@ -11,10 +11,8 @@ const apiLink = "https://api.shrtco.de/v2/shorten";
 function Cta() {
   const [link, setLink] = useState("");
   const [isError, setIsError] = useState(false);
-  const [requestedLinks, setRequestedLinks] = useState<string[]>([
-    "test request link",
-  ]);
-  const [shortenedLinks, setShortendLinks] = useState<string[]>([
+  const [inputLinks, setInputLinks] = useState<string[]>(["test request link"]);
+  const [shortLinks, setShortLinks] = useState<string[]>([
     "test shortened link",
   ]);
   const [linkLoading, setLinkLoading] = useState<boolean>(false);
@@ -25,7 +23,6 @@ function Cta() {
       | React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
     e.preventDefault();
-    console.log("hello");
 
     setLink((prev) => "");
 
@@ -35,8 +32,8 @@ function Cta() {
       setIsError(false);
       const res = await axios.get(apiLink, { params: { url: link } });
 
-      setRequestedLinks((prev) => [link, ...prev]);
-      setShortendLinks((prev) => [res.data.result.full_short_link2, ...prev]);
+      setInputLinks((prev) => [...prev, link]);
+      setShortLinks((prev) => [...prev, res.data.result.full_short_link2]);
 
       setLinkLoading(false);
     } catch (error) {
@@ -49,7 +46,7 @@ function Cta() {
     <div className={style.ctaContainer}>
       <div className={style.ctaElements}>
         <form className={style.cta} onSubmit={(e) => handleSubmit(e)}>
-          <div className={style.cta__inputContainer}>
+          <div className={style.inputContainer}>
             <input
               value={link}
               onChange={(e) => setLink(e.target.value)}
@@ -59,7 +56,6 @@ function Cta() {
               type="link"
               placeholder="Shorten a link here..."
             />
-
             {isError && (
               <div className={style.cta__errorText}>
                 <i>Please type a valid link</i>
@@ -78,8 +74,8 @@ function Cta() {
         </form>
 
         <ShortenedLinks
-          requestedLinks={requestedLinks}
-          shortenedLinks={shortenedLinks}
+          inputLinks={inputLinks}
+          shortLinks={shortLinks}
           linkLoading={linkLoading}
         />
       </div>
