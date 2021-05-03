@@ -23,10 +23,10 @@ function ShortenedLinks({ inputLinks, shortLinks, linkLoading }: props) {
 
         return (
           <div key={reverseIndex} className={style.block}>
-            <p>{inputLinks[reverseIndex]}</p>
+            <p className={style.block__reqLink}>{inputLinks[reverseIndex]}</p>
 
             <div className={style.block__right}>
-              <p>{shortLink}</p>
+              <p className={style.block__shortLink}>{shortLink}</p>
               <CopyButton shortLink={shortLink} />
             </div>
           </div>

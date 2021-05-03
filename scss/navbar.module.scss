@@ -1,21 +1,54 @@
+@use "variables" as var;
+
 .navbar {
   display: flex;
-  justify-content: space-between;
+  column-gap: 1.875rem;
+  align-items: center;
+
   margin: 0 11.4%;
   margin-top: 3rem;
 
-  &__nav {
-    display: flex;
-    align-items: center;
-
-    :not(:last-child) {
-      margin-right: 1.875rem;
-    }
+  @media (max-width: 860px) {
+    justify-content: space-between;
+    margin: 2.25rem 5.87% 0;
   }
 
-  .credsContainer {
+  &__nav {
     display: flex;
-    justify-content: flex-end;
+    column-gap: 1.875rem;
+  }
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__bar {
+    width: 22px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .itemContainer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.credsContainer {
+  @media (max-width: var.$mediaShift) {
+    margin: 0 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid white;
   }
 }
 
@@ -29,4 +62,9 @@
 #signUp {
   height: 2.5rem;
   width: 6.625rem;
+  @media (max-width: var.$mediaShift) {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 3.25rem;
+  }
 }

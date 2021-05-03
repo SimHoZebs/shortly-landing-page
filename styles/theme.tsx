@@ -48,6 +48,34 @@ const theme = createMuiTheme({
         },
       },
     },
+    MuiPopover: {
+      paper: {
+        position: "static",
+      },
+    },
+    MuiMenuItem: {
+      root: {
+        color: "white",
+        fontWeight: 700,
+        paddingTop: "1rem ",
+        paddingBottom: "1rem",
+      },
+    },
+
+    MuiList: {
+      padding: {
+        paddingTop: "1.5rem",
+        paddingBottom: "2.5rem",
+      },
+    },
+
+    MuiListItem: {
+      root: {
+        color: "white",
+        textAlign: "center",
+        justifyContent: "center",
+      },
+    },
   },
 
   palette: {
