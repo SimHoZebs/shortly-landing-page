@@ -6,9 +6,7 @@ import { Typography, Button } from "@material-ui/core";
 const BottomCta = () => {
   return (
     <div className={style.bottomCta}>
-      <Typography variant="h4">
-        <b>Boost your links today</b>
-      </Typography>
+      <b>Boost your links today</b>
 
       <div className={style.bottomCta__btnContainer}>
         <Button id={style.bottomCta__btn} variant="contained" color="primary">

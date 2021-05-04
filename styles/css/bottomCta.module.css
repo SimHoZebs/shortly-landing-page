@@ -2,13 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  padding: 4rem 1.275rem;
   text-align: center;
   color: white;
+  letter-spacing: -0.1rem;
+  font-weight: 700;
+  font-size: 2rem;
   background: #3b3054;
   background-image: url("../../public/images/bg-boost-desktop.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .bottomCta {
+    background-image: url("../../public/images/bg-boost-mobile.svg");
+  }
 }
 .bottomCta__btnContainer {
   width: fit-content;

@@ -1,14 +1,24 @@
+@use "variables" as var;
+
 .bottomCta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
+  padding: 4rem 1.275rem;
   text-align: center;
   color: white;
+  letter-spacing: -0.1rem;
+  font-weight: 700;
+  font-size: 2rem;
+
   background: hsl(257, 27%, 26%);
   background-image: url("../../public/images/bg-boost-desktop.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: var.$mediaShift) {
+    background-image: url("../../public/images/bg-boost-mobile.svg");
+  }
 
   &__btnContainer {
     width: fit-content;
