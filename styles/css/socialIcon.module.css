@@ -1,0 +1,16 @@
+.wrapper {
+  width: 24px;
+  height: 24px;
+}
+.wrapper .icon {
+  fill: white;
+  transition: fill 300ms;
+}
+.wrapper:hover {
+  cursor: pointer;
+}
+.wrapper:hover .icon {
+  fill: #2acfcf;
+}
+
+/*# sourceMappingURL=socialIcon.module.css.map */
