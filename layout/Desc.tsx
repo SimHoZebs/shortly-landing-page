@@ -33,7 +33,9 @@ const Desc = () => {
               </Typography>
             </div>
 
-            <Typography variant="body1">{blok.desc}</Typography>
+            <div className={style.block__desc}>
+              <Typography variant="body1">{blok.desc}</Typography>
+            </div>
           </div>
         ))}
       </div>
