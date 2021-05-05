@@ -38,28 +38,46 @@
 
     @media (max-width: var.$mediaShift) {
       flex-direction: column;
+      row-gap: 0.75rem;
     }
 
     p {
       margin: auto 0rem;
     }
 
-    &__reqLink {
-      padding-bottom: 0.75rem;
-      border-bottom: 1px solid var.$secondaryText;
-    }
-
-    &__shortLink {
-      padding-top: 0.75rem;
-      padding-bottom: 0.75rem;
-    }
-
     &__right {
       color: var.$primaryText;
       display: flex;
+      column-gap: 1.5rem;
+      row-gap: 0.75rem;
+      width: 50%;
+      justify-content: flex-end;
+
       @media (max-width: var.$mediaShift) {
+        width: 100%;
         flex-direction: column;
       }
     }
+  }
+}
+
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  width: 50%;
+
+  @media (max-width: var.$mediaShift) {
+    width: 100%;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var.$secondaryText;
+  }
+}
+
+.shortLinkWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  @media (max-width: var.$mediaShift) {
+    justify-content: flex-start;
   }
 }
