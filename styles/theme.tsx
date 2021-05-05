@@ -4,10 +4,6 @@ import { createMuiTheme } from "@material-ui/core/styles";
 const theme = createMuiTheme({
   typography: {
     fontFamily: "'Poppins', sans-serif",
-    h2: {
-      fontSize: "4rem",
-      fontWeight: 700,
-    },
 
     h4: {
       letterSpacing: "-0.1rem",
