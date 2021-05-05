@@ -1,4 +1,4 @@
-.ctaContainer {
+.ctaWrapper {
   background: #eff0f5;
 }
 
@@ -8,7 +8,7 @@
   column-gap: 1.5rem;
   position: relative;
   transform: translateY(-50%);
-  padding: 2.95rem 4rem;
+  padding: 4.3% 5.83%;
   border-radius: 0.8rem;
   margin: 0 11.4%;
   background-color: #3b3054;
@@ -21,18 +21,18 @@
     background-image: url("../../public/images/bg-shorten-mobile.svg");
     background-position: right top;
     background-size: 70%;
-    margin: 0 6.4%;
     flex-direction: column;
+    margin: 0 6.4%;
     padding: 1.5rem;
   }
 }
-.cta .inputContainer {
+.cta .inputWrapper {
   width: 82%;
   height: 4rem;
   border-radius: 0.8rem;
 }
 @media (max-width: 768px) {
-  .cta .inputContainer {
+  .cta .inputWrapper {
     height: 3.125rem;
     width: 100%;
   }

@@ -43,9 +43,9 @@ function Cta() {
   }
 
   return (
-    <div className={style.ctaContainer}>
+    <div className={style.ctaWrapper}>
       <form className={style.cta} onSubmit={(e) => handleSubmit(e)}>
-        <div className={style.inputContainer}>
+        <div className={style.inputWrapper}>
           <input
             value={link}
             onChange={(e) => setLink(e.target.value)}
