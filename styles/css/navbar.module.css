@@ -33,13 +33,13 @@
   height: 2px;
   background-color: black;
 }
-.menu .itemContainer {
+.menu .itemWrapper {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
-  .credsContainer {
+  .credsWrapper {
     margin: 0 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid white;

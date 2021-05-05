@@ -19,7 +19,7 @@
     background-image: url("../../public/images/bg-boost-mobile.svg");
   }
 }
-.bottomCta__btnContainer {
+.bottomCta__btnWrapper {
   width: fit-content;
   margin-top: 1.25rem;
 }

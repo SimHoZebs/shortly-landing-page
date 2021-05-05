@@ -8,7 +8,7 @@ const BottomCta = () => {
     <div className={style.bottomCta}>
       <b>Boost your links today</b>
 
-      <div className={style.bottomCta__btnContainer}>
+      <div className={style.bottomCta__btnWrapper}>
         <Button id={style.bottomCta__btn} variant="contained" color="primary">
           Get Started
         </Button>

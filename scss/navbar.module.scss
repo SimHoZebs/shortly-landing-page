@@ -38,13 +38,13 @@
     background-color: black;
   }
 
-  .itemContainer {
+  .itemWrapper {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 }
 
-.credsContainer {
+.credsWrapper {
   @media (max-width: var.$mediaShift) {
     margin: 0 1.5rem;
     padding-top: 1rem;

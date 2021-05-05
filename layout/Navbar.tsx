@@ -41,7 +41,7 @@ function Navbar() {
             ))}
           </div>
 
-          <div className={style.credsContainer}>
+          <div className={style.credsWrapper}>
             <Button variant="outlined" id={style.login}>
               Login
             </Button>
@@ -72,7 +72,7 @@ function Navbar() {
             onClose={handleClose}
             classes={{ list: classes.container, paper: classes.paper }}
           >
-            <div className={style.itemContainer}>
+            <div className={style.itemWrapper}>
               {indexData.menus.map((menu, index) => (
                 <MenuItem key={index} onClick={handleClose}>
                   {menu}
@@ -80,7 +80,7 @@ function Navbar() {
               ))}
             </div>
 
-            <div className={style.credsContainer}>
+            <div className={style.credsWrapper}>
               <MenuItem onClick={handleClose}>Login</MenuItem>
 
               <Button id={style.signUp} variant="contained" color="primary">
