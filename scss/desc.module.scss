@@ -11,8 +11,9 @@ $mediaShift: 1100px;
   min-height: fit-content;
 
   @media (max-width: $mediaShift) {
-    padding-left: 1.375rem;
-    padding-right: 1.375rem;
+    $padding: 5.87%;
+    padding-left: $padding;
+    padding-right: $padding;
   }
 
   &__desc {
@@ -23,21 +24,25 @@ $mediaShift: 1100px;
       width: fit-content;
     }
   }
+}
 
-  &__blockContainer {
-    position: relative;
-    margin-top: 6.625rem;
-    display: flex;
-    text-align: left;
-    justify-content: center;
-    height: fit-content;
-    column-gap: 1.875rem;
+.blockWrapper {
+  position: relative;
+  margin-top: 6.625rem;
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+  height: fit-content;
+  column-gap: 2.857%;
+  margin-left: 13.54%;
+  margin-right: 13.54%;
 
-    @media (max-width: $mediaShift) {
-      text-align: center;
-      flex-direction: column;
-      row-gap: 5.75rem;
-    }
+  @media (max-width: $mediaShift) {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    flex-direction: column;
+    row-gap: 5.75rem;
   }
 
   &__line {
@@ -59,8 +64,7 @@ $mediaShift: 1100px;
 .block {
   position: relative;
   background: white;
-  max-width: 21.875rem;
-  height: 16.75rem;
+  height: max-content;
   padding: 1.8rem;
   padding-top: 0rem;
   padding-bottom: 1.875rem;
@@ -84,7 +88,7 @@ $mediaShift: 1100px;
     align-items: center;
   }
 
-  &__imgContainer {
+  &__imgWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,8 +109,5 @@ $mediaShift: 1100px;
   &__title {
     margin-bottom: 1.375rem;
     text-transform: capitalize;
-  }
-  &__desc {
-    margin-bottom: 1.375rem;
   }
 }

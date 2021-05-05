@@ -19,11 +19,11 @@ const Desc = () => {
         </Typography>
       </div>
 
-      <div className={style.desc__blockContainer}>
-        <div className={style.desc__line}></div>
+      <div className={style.blockWrapper}>
+        <div className={style.blockWrapper__line}></div>
         {indexData.desc.map((blok, index) => (
           <div key={index} className={style.block}>
-            <div className={style.block__imgContainer}>
+            <div className={style.block__imgWrapper}>
               <img className={style.block__img} src={blok.image} alt="" />
             </div>
 
@@ -33,9 +33,7 @@ const Desc = () => {
               </Typography>
             </div>
 
-            <div className={style.block__desc}>
-              <Typography variant="body1">{blok.desc}</Typography>
-            </div>
+            <Typography variant="body1">{blok.desc}</Typography>
           </div>
         ))}
       </div>
