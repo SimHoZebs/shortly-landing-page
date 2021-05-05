@@ -27,24 +27,34 @@
     flex-direction: column;
   }
 }
-.linkWrapper .block {
-  text-align: center;
+
+.block {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-.linkWrapper .block__title {
+@media (max-width: 768px) {
+  .block {
+    text-align: center;
+  }
+}
+.block__title {
   margin-bottom: 1rem;
   text-transform: capitalize;
 }
-.linkWrapper .block__link {
+.block__link {
   width: max-content;
-  margin: 0 auto;
 }
-.linkWrapper .block__link:hover {
+@media (max-width: 768px) {
+  .block__link {
+    margin: 0 auto;
+  }
+}
+.block__link:hover {
   color: #2acfcf;
 }
-.linkWrapper .socials {
+
+.socials {
   display: flex;
   height: 24px;
   align-items: center;
