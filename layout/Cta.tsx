@@ -44,41 +44,39 @@ function Cta() {
 
   return (
     <div className={style.ctaContainer}>
-      <div className={style.ctaElements}>
-        <form className={style.cta} onSubmit={(e) => handleSubmit(e)}>
-          <div className={style.inputContainer}>
-            <input
-              value={link}
-              onChange={(e) => setLink(e.target.value)}
-              className={`${style.cta__input} ${
-                isError && style.cta__input_error
-              }`}
-              type="link"
-              placeholder="Shorten a link here..."
-            />
-            {isError && (
-              <div className={style.cta__errorText}>
-                <i>Please type a valid link</i>
-              </div>
-            )}
-          </div>
+      <form className={style.cta} onSubmit={(e) => handleSubmit(e)}>
+        <div className={style.inputContainer}>
+          <input
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+            className={`${style.cta__input} ${
+              isError && style.cta__input_error
+            }`}
+            type="link"
+            placeholder="Shorten a link here..."
+          />
+          {isError && (
+            <div className={style.cta__errorText}>
+              <i>Please type a valid link</i>
+            </div>
+          )}
+        </div>
 
-          <Button
-            id={style.cta__btn}
-            onClick={(e) => handleSubmit(e)}
-            variant="contained"
-            color="primary"
-          >
-            Shorten it!
-          </Button>
-        </form>
+        <Button
+          id={style.cta__btn}
+          onClick={(e) => handleSubmit(e)}
+          variant="contained"
+          color="primary"
+        >
+          Shorten it!
+        </Button>
+      </form>
 
-        <ShortenedLinks
-          inputLinks={inputLinks}
-          shortLinks={shortLinks}
-          linkLoading={linkLoading}
-        />
-      </div>
+      <ShortenedLinks
+        inputLinks={inputLinks}
+        shortLinks={shortLinks}
+        linkLoading={linkLoading}
+      />
     </div>
   );
 }

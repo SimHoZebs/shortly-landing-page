@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-  useRef,
-  MutableRefObject,
-  RefObject,
-} from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import indexData from "../components/indexData";
 
@@ -32,7 +26,7 @@ function Navbar() {
     return () => {
       window.removeEventListener("resize", handleResizeEvent);
     };
-  });
+  }, []);
 
   return (
     <nav ref={navbarRef} className={style.navbar}>
@@ -79,9 +73,11 @@ function Navbar() {
             classes={{ list: classes.container, paper: classes.paper }}
           >
             <div className={style.itemContainer}>
-              <MenuItem onClick={handleClose}>Features</MenuItem>
-              <MenuItem onClick={handleClose}>Pricing</MenuItem>
-              <MenuItem onClick={handleClose}>Resources</MenuItem>
+              {indexData.menus.map((menu, index) => (
+                <MenuItem key={index} onClick={handleClose}>
+                  {menu}
+                </MenuItem>
+              ))}
             </div>
 
             <div className={style.credsContainer}>
