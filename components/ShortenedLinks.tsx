@@ -3,22 +3,22 @@ import React, { useState, useEffect, useRef } from "react";
 import style from "../styles/css/shortenedLinks.module.css";
 import CopyButton from "./CopyButton";
 interface props {
-  inputLinks: string[];
+  reqLinks: string[];
   shortLinks: string[];
   linkLoading: boolean;
 }
 
-function ShortenedLinks({ inputLinks, shortLinks, linkLoading }: props) {
+function ShortenedLinks({ reqLinks, shortLinks, linkLoading }: props) {
   const shortLinksLastIndex = shortLinks.length - 1;
-  const [inputLinkMaxChar, setInputLinkMaxChar] = useState(100);
+  const [reqLinkMaxChar, setInputLinkMaxChar] = useState(100);
   const [shortLinkMaxChar, setShortLinkMaxChar] = useState(100);
 
-  const inputLinkWrapperRef = useRef<HTMLDivElement | null>(null);
+  const reqLinkWrapperRef = useRef<HTMLDivElement | null>(null);
   const shortLinkWrapperRef = useRef<HTMLDivElement | null>(null);
 
   function handleResizeEvent() {
     setInputLinkMaxChar(
-      Math.floor((inputLinkWrapperRef.current?.offsetWidth || 0) / 11)
+      Math.floor((reqLinkWrapperRef.current?.offsetWidth || 0) / 11)
     );
     setShortLinkMaxChar(
       Math.floor((shortLinkWrapperRef.current?.offsetWidth || 0) / 11)
@@ -27,6 +27,7 @@ function ShortenedLinks({ inputLinks, shortLinks, linkLoading }: props) {
 
   useEffect(() => {
     window.addEventListener("resize", handleResizeEvent);
+    handleResizeEvent();
 
     return () => window.removeEventListener("resize", handleResizeEvent);
   }, []);
@@ -40,22 +41,22 @@ function ShortenedLinks({ inputLinks, shortLinks, linkLoading }: props) {
       {shortLinks.map((_, index) => {
         const reverseIndex = shortLinksLastIndex - index;
         let shortLink = shortLinks[reverseIndex];
-        let inputLink = inputLinks[reverseIndex];
+        let reqLink = reqLinks[reverseIndex];
 
         shortLink =
           shortLink.length > shortLinkMaxChar
             ? `${shortLink.slice(0, shortLinkMaxChar)} ...`
             : shortLink;
 
-        inputLink =
-          inputLink.length > inputLinkMaxChar
-            ? `${inputLink.slice(0, inputLinkMaxChar)}...`
-            : inputLink;
+        reqLink =
+          reqLink.length > reqLinkMaxChar
+            ? `${reqLink.slice(0, reqLinkMaxChar)}...`
+            : reqLink;
 
         return (
           <div key={reverseIndex} className={style.block}>
-            <div ref={inputLinkWrapperRef} className={style.linkWrapper}>
-              <p>{inputLink}</p>
+            <div ref={reqLinkWrapperRef} className={style.linkWrapper}>
+              <p>{reqLink}</p>
             </div>
 
             <div className={style.block__right}>

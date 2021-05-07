@@ -22,6 +22,7 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("resize", handleResizeEvent);
+    handleResizeEvent();
 
     return () => {
       window.removeEventListener("resize", handleResizeEvent);
