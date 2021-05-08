@@ -16,15 +16,14 @@ interface prevLinks {
 function Cta() {
   const [link, setLink] = useState("");
   const [isError, setIsError] = useState(false);
-  const [reqLinks, setInputLinks] = useState<string[]>(["test request link"]);
-  const [shortLinks, setShortLinks] = useState<string[]>([
-    "test shortened link",
-  ]);
+  const [reqLinks, setInputLinks] = useState<string[]>([]);
+  const [shortLinks, setShortLinks] = useState<string[]>([]);
   const [linkLoading, setLinkLoading] = useState<boolean>(false);
+  const [ctaBtnText, setctaBtnText] = useState("Shorten it!");
 
   useEffect(() => {
     deleteExpiredLinks();
-    const { reqLinks, shortLinks } = localStorageToArrays();
+    const { reqLinks, shortLinks } = parseLocalStorageToArrays();
 
     setInputLinks(reqLinks);
     setShortLinks(shortLinks);
@@ -43,7 +42,7 @@ function Cta() {
     }
   }
 
-  function localStorageToArrays() {
+  function parseLocalStorageToArrays() {
     const reqLinks: string[] = [];
     const shortLinks: string[] = [];
 
@@ -122,8 +121,9 @@ function Cta() {
           onClick={(e) => handleSubmit(e)}
           variant="contained"
           color="primary"
+          disabled={linkLoading}
         >
-          Shorten it!
+          {ctaBtnText}
         </Button>
       </form>
 

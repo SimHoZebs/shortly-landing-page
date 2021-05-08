@@ -16,7 +16,7 @@ function ShortenedLinks({ reqLinks, shortLinks, linkLoading }: props) {
   const reqLinkWrapperRef = useRef<HTMLDivElement | null>(null);
   const shortLinkWrapperRef = useRef<HTMLDivElement | null>(null);
 
-  function handleResizeEvent() {
+  function calcLinkLength() {
     setInputLinkMaxChar(
       Math.floor((reqLinkWrapperRef.current?.offsetWidth || 0) / 11)
     );
@@ -26,10 +26,10 @@ function ShortenedLinks({ reqLinks, shortLinks, linkLoading }: props) {
   }
 
   useEffect(() => {
-    window.addEventListener("resize", handleResizeEvent);
-    handleResizeEvent();
+    window.addEventListener("resize", calcLinkLength);
+    calcLinkLength();
 
-    return () => window.removeEventListener("resize", handleResizeEvent);
+    return () => window.removeEventListener("resize", calcLinkLength);
   }, []);
 
   return (

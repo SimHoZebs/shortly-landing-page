@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import indexData from "../components/indexData";
 
@@ -24,7 +25,13 @@ const Desc = () => {
         {indexData.desc.map((blok, index) => (
           <div key={index} className={style.block}>
             <div className={style.block__imgWrapper}>
-              <img className={style.block__img} src={blok.image} alt="" />
+              <Image
+                className={style.block__img}
+                src={blok.image}
+                alt=""
+                width="50"
+                height="50"
+              />
             </div>
 
             <div className={style.block__title}>
