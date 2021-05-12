@@ -10,21 +10,32 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
             rel="stylesheet"
           />
+
+          <link
+            rel="stylesheet"
+            media="print"
+            onLoad="this.onLoad=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+          />
+
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZNJ8X9NKMQ"
           ></script>
+
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=
               G-ZNJ8X9NKMQ
             `}
           />
+
           <script
             dangerouslySetInnerHTML={{
               __html: `
