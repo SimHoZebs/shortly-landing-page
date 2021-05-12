@@ -17,6 +17,13 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
+          <link
+            rel="stylesheet"
+            media="print"
+            onLoad="this.onLoad=null;this.removeAttribute('media');"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+          />
+
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-ZNJ8X9NKMQ"
