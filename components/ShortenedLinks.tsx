@@ -26,9 +26,11 @@ function ShortenedLinks({ reqLinks, shortLinks, linkLoading }: props) {
   }
 
   useEffect(() => {
-    window.addEventListener("resize", calcLinkLength);
     calcLinkLength();
+  }, [shortLinks]);
 
+  useEffect(() => {
+    window.addEventListener("resize", calcLinkLength);
     return () => window.removeEventListener("resize", calcLinkLength);
   }, []);
 
