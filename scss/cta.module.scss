@@ -18,7 +18,7 @@ $inputWrapperWidth: 82%;
 
 .cta {
   display: flex;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
   column-gap: 1.5rem;
   position: relative;
   transform: translateY(-50%);
@@ -82,7 +82,9 @@ $inputWrapperWidth: 82%;
   &__errorText {
     color: var.$error;
     position: absolute;
+
     @media (max-width: var.$mediaShift) {
+      font-size: 1rem;
       position: relative;
     }
   }
