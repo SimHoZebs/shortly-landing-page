@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 
 import axios from "axios";
 import ShortenedLinks from "../components/ShortenedLinks";
-const apiLink = "https://api.shrtco.de/v2/shorten";
+const apiLink = "https://goolnk.com/api/v1/shorten";
 
 interface prevLinks {
   req: string;
@@ -76,14 +76,20 @@ function Cta() {
     e.preventDefault();
 
     setLink((prev) => "");
+    setctaBtnText((prev) => "Shortening...");
 
     try {
       setLinkLoading(true);
       setIsError(false);
 
-      const res = await axios.get(apiLink, { params: { url: link } });
+      const body = {
+        method: "GET",
+        url: apiLink,
+      };
 
-      const shortLink = res.data.result.full_short_link2;
+      const res = await axios.post(apiLink, { params: { url: link } });
+
+      const shortLink = res.data.result.result_url;
       storeLinksToLocalStorage(link, shortLink);
       setInputLinks((prev) => [...prev, link]);
       setShortLinks((prev) => [...prev, shortLink]);
