@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import style from "../styles/css/shortenedLinks.module.css";
+import Image from "next/image";
 import CopyButton from "./CopyButton";
 interface props {
   reqLinks: string[];
@@ -37,7 +38,13 @@ function ShortenedLinks({ reqLinks, shortLinks, linkLoading }: props) {
   return (
     <div className={style.container}>
       {linkLoading && (
-        <img className={style.loadingImg} src="/images/loading.svg" alt="" />
+        <Image
+          className={style.loadingImg}
+          src="/images/loading.svg"
+          alt=""
+          height="80px"
+          width="80px"
+        />
       )}
 
       {shortLinks.map((_, index) => {

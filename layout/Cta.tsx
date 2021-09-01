@@ -31,6 +31,8 @@ function Cta() {
 
   function deleteExpiredLinks() {
     const now = new Date();
+    //localStorage stores ally-supports-cache in dev mode, and needs to be removed it order for the code to work.
+    localStorage.removeItem("ally-supports-cache");
     for (let i = 0; i < localStorage.length; i++) {
       const prevLinks: prevLinks = JSON.parse(
         localStorage.getItem(i.toString()) || ""

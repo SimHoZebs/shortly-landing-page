@@ -1,4 +1,6 @@
 import React from "react";
+//No idea why this error is even occuring. I'm doing exactly as it wants me to do.
+// eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import theme from "../styles/theme";
@@ -15,31 +17,6 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
             rel="stylesheet"
-          />
-
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-ZNJ8X9NKMQ"
-          ></script>
-
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=
-              G-ZNJ8X9NKMQ
-            `}
-          />
-
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZNJ8X9NKMQ', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
           />
         </Head>
         <body>
@@ -82,6 +59,7 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
+      // eslint-disable-next-line react/display-name
       enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
